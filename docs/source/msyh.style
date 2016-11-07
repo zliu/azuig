@@ -1,0 +1,12 @@
+# this font does not work
+embeddedFonts: [msyh.ttf, msyh.ttf, msyhbd.ttf, msyhbd.ttf]
+
+fontsAlias:
+  stdFont: msyh
+  stdBold: msyhbd
+  stdItalic: msyh
+  stdBoldItalic: msyhbd
+
+styles:
+  base:
+    wordWrap: CJK

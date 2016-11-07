@@ -1,0 +1,12 @@
+# this font does not work
+embeddedFonts: [wqy-zenhei.ttc, wqy-zenhei.ttc, wqy-zenhei.ttc, wqy-zenhei.ttc]
+
+fontsAlias:
+  stdFont: wqy-zenhei
+  stdBold: wqy-zenhei
+  stdItalic: wqy-zenhei
+  stdBoldItalic: wqy-zenhei
+
+styles:
+  base:
+    wordWrap: CJK

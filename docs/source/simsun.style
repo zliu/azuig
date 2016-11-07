@@ -1,0 +1,12 @@
+# List any fonts you would like to embed in the PDF here
+embeddedFonts: [SimSun.ttc, SimSun.ttc, SimSun.ttc, SimSun.ttc]
+
+fontsAlias:
+  stdFont: SimSun
+  stdBold: SimSun
+  stdItalic: SimSun
+  stdBoldItalic: SimSun
+
+styles:
+  base:
+    wordWrap: CJK
