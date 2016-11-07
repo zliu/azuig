@@ -3,13 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to AZUIC's documentation!
+AZ联合工业集团
 =================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 集团旗下组织:
 
+   shadow_guards
+   az
+   tips
 
 
 Indices and tables
@@ -18,3 +21,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
