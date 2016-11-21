@@ -1,1 +1,2 @@
+ --upgrade pip
 rst2pdf

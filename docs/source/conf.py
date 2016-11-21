@@ -123,6 +123,12 @@ latex_elements = {
     # Additional stuff for the LaTeX preamble.
     #
     # 'preamble': '',
+    'preamble': r''',
+    \hypersetup{unicode=true}
+    \usepackage{CJKutf8}
+    \begin{CJK}{UTF8}{gbsn}
+    \AtEndDocument{\end{CJK}}
+    ''',
 
     # Latex figure (float) alignment
     #
@@ -133,7 +139,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'AZUIC.tex', u'AZUIC Documentation',
+    (master_doc, 'AZUIC.tex', u'影卫手册',
      u'Skywalker', 'manual'),
 ]
 
