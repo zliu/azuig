@@ -14,6 +14,11 @@ AZ联合工业集团
    az
    tips
 
+PDF 版本下载
+============
+点击下载_
+
+.. _点击下载 : https://raw.githubusercontent.com/zliu/azuic/master/docs/source/pdf/影卫手册.pdf
 
 Indices and tables
 ==================

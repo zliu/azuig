@@ -22,5 +22,6 @@ help:
 
 pdf:
 	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) source build/pdf
+	@cp build/pdf/*.pdf source/pdf
 	@echo
 	@echo "Build finished. The PDF files are in build/pdf."
