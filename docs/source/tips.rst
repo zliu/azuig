@@ -5,8 +5,12 @@ EVE百宝箱
 --------
 http://venuswormhole.sinaapp.com/
 
-EVE各职业路线介绍（经典）
--------------------------
+EVE国服市场
+-----------
+http://www.ceve-market.org/
+
+EVE世界服职业路线大全（经典）
+-----------------------------
 
 .. image:: images/eve_professional_lives.jpg
 

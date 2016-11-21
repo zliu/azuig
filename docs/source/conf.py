@@ -196,7 +196,7 @@ epub_exclude_files = ['search.html']
 # would mean that specific document would be compressed
 # regardless of the global pdf_compressed setting.
 pdf_documents = [
-         ('index', u'azuic.pdf', u'My Project', u'Skywalker'),
+         ('index', u'影卫手册', u'影卫手册', u'Skywalker'),
          ]
 # A comma-separated list of custom stylesheets. Example:
 pdf_stylesheets = ['simsun', 'a4']
