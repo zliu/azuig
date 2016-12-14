@@ -1,10 +1,11 @@
 银河影卫俱乐部
 ==============
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    shadow_guards/organization
    shadow_guards/operation_mode
+   shadow_guards/operation_guide
 
 
 军团简介
