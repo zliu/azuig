@@ -1,0 +1,96 @@
+#!/usr/bin/env python
+# coding=utf-8
+import sys
+import os
+import xlrd
+import urllib2
+book = xlrd.open_workbook('eve_db.xls', 'r')
+
+n = book.nsheets
+for tab_index in range(n):
+    #print('the',tab_index,' th sheet')
+    sheet = book.sheet_by_index(tab_index)
+    print(u"{0} {1} {2}".format(sheet.name, sheet.nrows, sheet.ncols))
+    if (sheet.name == u"物品列表"):
+        item_sheet = sheet
+    if (sheet.name == u"星域列表"):
+        region_sheet = sheet
+    if (sheet.name == u"星系列表"):
+        system_sheet = sheet
+    if (sheet.name == u"星座列表"):
+        constellation_sheet = sheet
+    if (sheet.name == u"NPC空間站"):
+        station_sheet = sheet
+
+#print 'item sheet', item_sheet.name
+#print 'region sheet', region_sheet.name
+#print 'system sheet', system_sheet.name
+#print 'constellation sheet', constellation_sheet.name
+#print 'station sheet', station_sheet.name
+
+item_list = {}
+item_name_to_id = {}
+for r in range(item_sheet.nrows):
+    item_name_to_id[item_sheet.cell_value(rowx=r, colx=1)] = item_sheet.cell_value(rowx=r, colx=0)
+    item_list[item_sheet.cell_value(rowx=r, colx=0)] = {
+            'name': item_sheet.cell_value(rowx=r, colx=1),
+            'description': item_sheet.cell_value(rowx=r, colx=2),
+            'market_category_1': item_sheet.cell_value(rowx=r, colx=3),
+            'market_category_2': item_sheet.cell_value(rowx=r, colx=4),
+            'market_category_3': item_sheet.cell_value(rowx=r, colx=5),
+            'market_category_4': item_sheet.cell_value(rowx=r, colx=6),
+            'market_category_5': item_sheet.cell_value(rowx=r, colx=7),
+            'market_category_6': item_sheet.cell_value(rowx=r, colx=8)
+            #'market_category_7': item_sheet.cell_value(rowx=r, colx=9)
+            }
+#    print item_sheet.cell_value(rowx=r, colx=1)
+#    if r == 3:
+#        break
+#
+
+print item_list['34']['name'], item_list['19']['description']
+print '----'
+print item_name_to_id[u'三钛合金'], item_name_to_id[item_list['34']['name']]
+# verify the map between item id and item name can be matched to each other
+# so that user can use id to find name, and vice versa
+for key in item_list:
+    name = item_list[key]['name']
+    id = key
+    if name != item_list[id]['name']:
+        print name, id, 'does not match'
+        break
+# verify end
+region_list = {}
+system_list = {}
+constellation_list = {}
+station_sheet = {}
+
+print sys.argv[1]
+input_id = item_name_to_id[sys.argv[1].decode('utf-8')]
+print input_id
+
+exit
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    # Legacy Python that doesn't verify HTTPS certificates by default
+    pass
+else:
+    # Handle target environment that doesn't support HTTPS verification
+    ssl._create_default_https_context = _create_unverified_https_context
+
+myproxy='http://localhost:8087'
+proxy = urllib2.ProxyHandler({'http': 'localhost:8087'})
+opener = urllib2.build_opener(proxy)
+urllib2.install_opener(opener)
+file_name=input_id+'_64.png'
+imgserver='https://imageserver.eveonline.com/Type/'
+with open(file_name,'wb') as f:
+    f.write(urllib2.urlopen(imgserver+input_id+'64.png').read())
+    f.close()
+#urllib.urlretrieve('https://imageserver.eveonline.com/Type/'+input_id+'_64.png', input_id+'_64.png', proxies=myproxy)
+print item_list[input_id]['name']
+os.system('imgcat '+input_id+'_64.png')
+print item_list[input_id]['description']
