@@ -1,2 +1,2 @@
-# azuic
-AZ United Industrial Corporation
+# azuig
+AZ United Industrial Group
