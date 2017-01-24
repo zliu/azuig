@@ -1,2 +1,2 @@
-# azuig
+# AZUIG
 AZ United Industrial Group

@@ -16,7 +16,7 @@ def get_price(item_id = 34, sell_or_buy = 'buy'):
   system='/system/' + system_id
   response_format='json'
   url = marketurl + region + system + item + '.' + response_format
-  price = json.loads(urllib2.urlopen(url).read())
+  price = json.loads(urllib2.urlopen(url, timeout = 5).read())
   #print 'sell - min', price['sell']['min']
   #print 'buy - max', price['buy']['max']
   if sell_or_buy == 'buy':
