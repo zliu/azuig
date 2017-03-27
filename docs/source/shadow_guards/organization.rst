@@ -23,8 +23,7 @@
 
   * Mr驚雷_
   * 大豆高粱_
-  * 臭臭的麦兜_
-  * 蹦达的短耳兔_
+  * 萝爵_
 
 .. _军团详情 : http://kb.ceve-market.org/corp/98062855/
 
@@ -36,3 +35,4 @@
 .. _大豆高粱 : http://board.ceve-market.org/char/93491057/
 .. _臭臭的麦兜 : http://board.ceve-market.org/char/93449797/
 .. _蹦达的短耳兔 : http://board.ceve-market.org/char/93418888/
+.. _萝爵: http://board.ceve-market.org/char/93601064/
